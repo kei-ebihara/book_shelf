@@ -10,9 +10,7 @@ class Book < ApplicationRecord
     }
   validates :publish_date, presence: true
   validates :description, presence: true, length: { maximum: 1000 }
-
-
-
+  
   before_save do
     self.image = new_image if new_image
   end
